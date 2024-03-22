@@ -1,0 +1,49 @@
+body {
+    background-image: linear-gradient(rgb(249, 252, 253), rgb(5, 172, 172));
+    color: black;
+    margin: 0; /* Removendo margem padrão do body */
+    padding-bottom: 100px; /* Adicionando espaço na parte inferior para o rodapé */
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 500px;
+    grid-gap: 20px;
+    padding-bottom: 100px; /* Ajuste do espaçamento inferior */
+}
+
+input[type=text],
+select,
+input[type=password],
+input[type=date] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Certificando-se de que o tamanho inclua preenchimento e borda */
+}
+
+input[type=button] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    padding: 20px 0; /* Espaçamento interno (topo e base) */
+    position: fixed; /* Fixar o rodapé na parte inferior da página */
+    bottom: 0; /* Posicionamento na parte inferior */
+    width: 100%; /* Largura total */
+}
