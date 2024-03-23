@@ -1,17 +1,26 @@
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(rgb(249, 252, 253), rgb(5, 172, 172));
-    color: black;
-    margin: 0; /* Removendo margem padrão do body */
-    padding-bottom: 100px; /* Adicionando espaço na parte inferior para o rodapé */
+    color: #333;
+    margin: 0;
+    padding-bottom: 100px;
 }
 
 .form {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 auto;
+    margin: 50px auto; /* Adicionei margem para centralizar o formulário */
     max-width: 500px;
     grid-gap: 20px;
-    padding-bottom: 100px; /* Ajuste do espaçamento inferior */
+    background-color: #fff; /* Adicionei uma cor de fundo para o formulário */
+    border-radius: 10px; /* Adicionei borda arredondada para o formulário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionei sombra para o formulário */
+    padding: 30px;
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 input[type=text],
@@ -22,28 +31,19 @@ input[type=date] {
     padding: 12px;
     margin: 8px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Certificando-se de que o tamanho inclua preenchimento e borda */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px; /* Ajustei o tamanho da fonte */
 }
 
 input[type=button] {
     width: 100%;
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
+    padding: 12px 20px;
     margin: 8px 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-/* Estilos do rodapé */
-footer {
-    background-color: #333; /* Cor de fundo do rodapé */
-    color: #fff; /* Cor do texto */
-    text-align: center; /* Alinhamento do texto */
-    padding: 20px 0; /* Espaçamento interno (topo e base) */
-    position: fixed; /* Fixar o rodapé na parte inferior da página */
-    bottom: 0; /* Posicionamento na parte inferior */
-    width: 100%; /* Largura total */
+    font-size: 16px;
 }
