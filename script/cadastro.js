@@ -9,8 +9,8 @@ function isValidEmail(email) {
 
 // Função para validar o formato de CPF
 function validaCpf(cpf) {
-  cpf = cpf.replace(/[^\d]+/g, ''); // Remove non-numeric characters
-  if (cpf.length !== 11) return false; // Invalid length
+  cpf = cpf.replace(/[^\d]+/g, ''); 
+  if (cpf.length !== 11) return false; 
 
   // Estrutura de Validação de CPF / CNPJ
   let sum = 0;
