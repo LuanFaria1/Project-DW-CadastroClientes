@@ -12,7 +12,7 @@ function validaCpf(cpf) {
   cpf = cpf.replace(/[^\d]+/g, ''); // Remove non-numeric characters
   if (cpf.length !== 11) return false; // Invalid length
 
-  // Validate the CPF structure
+  // Estrutura de Validação de CPF / CNPJ
   let sum = 0;
   for (let i = 1; i <= 9; i++) {
     sum += parseInt(cpf.substring(i - 1, i)) * (11 - i);
