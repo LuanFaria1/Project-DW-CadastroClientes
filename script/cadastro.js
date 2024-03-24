@@ -87,10 +87,10 @@ async function cadastroUsuario() {
     name: name.value,
     email: email.value,
     user_type_id: user_type.value,
-    password: '123456', // verificar senha
+    password: document.getElementById('password').value, 
     cpf_cnpj: cpf_cnpj.value,
     terms: 1,
-    birthday: '2000-10-12',
+    birthday: document.getElementById('birthday').value
   };
 
   // Realizando uma requisição POST para a URL da API

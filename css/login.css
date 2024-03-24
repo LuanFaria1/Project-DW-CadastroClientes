@@ -1,27 +1,31 @@
+/* Definindo estilos para o corpo e HTML */
 body, html {
   height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Cor de fundo */
 }
 
+/* Estilos para o contêiner */
 .container {
-  text-align: center;
+  text-align: center; /* Centralizando o conteúdo */
 }
 
+/* Estilos para a mensagem */
 .message {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Cor de fundo */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
+/* Estilos para os botões */
 button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #007bff; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -29,6 +33,7 @@ button {
   margin-top: 20px;
 }
 
+/* Efeito de hover nos botões */
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
