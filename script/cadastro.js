@@ -1,5 +1,5 @@
 // Definindo a URL da API para cadastro de usuários
-const url = 'https://api-go-wash-efc9c9582687.herokuapp.com/api/user';
+const url = 'https://go-wash-api.onrender.com/api/user';
 
 // Função para validar o formato de e-mail
 function isValidEmail(email) {
