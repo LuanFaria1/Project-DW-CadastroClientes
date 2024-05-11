@@ -1,18 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Efetuado</title>
-    <link rel="stylesheet" href="../css/login.css">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/login.css" media="screen" />
 </head>
 <body>
-    <div class="wrapper">
-        <div class="success-container">
-            <h1>Cadastro Efetuado com Sucesso!</h1>
-            <p>Seu cadastro foi realizado com sucesso. Você agora faz parte da nossa comunidade.</p>
-            <a href="../index.html" class="btn">Voltar à Página Inicial</a>
-        </div>
+  <header>
+    <div class="containerlogo">
+      <img src="../img/prata.jfif" class="logo">
+      <a href="../index.html">ATelier Prata</a>
     </div>
+    <ul>
+      <li>Login</li>
+    </ul>
+  </header>
+
+  <section class="form">
+    <h1>Faça o seu login</h1>
+    <form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Seu email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Sua senha" required>
+      </div>
+      <input type="button" value="Entrar" onclick="validarLogin()">
+    </form>
+  </section>
+
+  <footer>
+    <div id="error-message"></div>
+  </footer>
+
+  <script src="../script/login.js"></script>
 </body>
 </html>

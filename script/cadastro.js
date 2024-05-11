@@ -63,6 +63,7 @@ async function cadastroUsuario() {
   const email = document.getElementById('email');
   const cpf_cnpj = document.getElementById('cpf_cnpj');
   const user_type = document.getElementById('user_type');
+  const birthday = document.getElementById('birthday');
 
   // Verificando se os campos obrigatórios estão preenchidos
   if (!name.value || !email.value || !cpf_cnpj.value) {
@@ -90,9 +91,12 @@ async function cadastroUsuario() {
     password: document.getElementById('password').value, 
     cpf_cnpj: cpf_cnpj.value,
     terms: 1,
-    birthday: document.getElementById('birthday').value
+    birthday: birthday.value
   };
 
+  // Salvando os dados do usuário no localStorage
+  localStorage.setItem('userData', JSON.stringify(userData));
+  
   // Realizando uma requisição POST para a URL da API
   try {
     const response = await fetch(url, {
