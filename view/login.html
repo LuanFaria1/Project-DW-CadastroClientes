@@ -12,7 +12,7 @@
           <a href="../index.html">Atelier Prata</a>
       </div>
       <ul>
-        <li><a href="../home.html">Cadastrar</a></li>  <!-- COLOCAR PARA DIRECIONAR O GUIA DE CADASTRO -->
+        <li><a href="../home.html">Cadastrar</a></li> 
       </ul>
     </header>
     <section class="form">
@@ -24,18 +24,20 @@
 
                 <label for="password">Senha</label>
                 <input type="password" id="password" name="password" placeholder="Senha">
-                <input type="button" value="Submit" onclick="redirectHome()">
+                
+                <input type="button" value="Login" onclick="login()">
             </div>
         </form>
+        
+        <!-- Mensagem de carregamento -->
+        <div id="loading" style="display:none;">Carregando...</div>
+        
+        <!-- Mensagem de erro -->
+        <div id="error-message"></div>
     </section>
     <footer>
-        <div id="error-message"></div>
+        2024 @ Todos os Direitos Reservados à ATelier Prata
     </footer>
     <script src="../script/login.js"></script>
-    <script>
-        function redirectHome() {
-            window.location.href = "../home.html";
-        }
-    </script>
 </body>
 </html>

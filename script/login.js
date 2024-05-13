@@ -4,6 +4,12 @@ async function login() {
     var email = document.getElementById('email').value;
     var senha = document.getElementById('password').value;
 
+    // Limpar qualquer mensagem de erro anterior
+    document.getElementById('error-message').innerText = '';
+    
+    // Mostrar uma mensagem de carregamento ou indicador
+    document.getElementById('loading').style.display = 'block';
+
     try {
         let resposta = await fetch(url, {
             method: "POST",
@@ -17,13 +23,27 @@ async function login() {
             }
         });
 
+        // Esconder a mensagem de carregamento ou indicador
+        document.getElementById('loading').style.display = 'none';
+
         if (!resposta.ok) {
-            throw new Error('Falha ao realizar login. Verifique suas credenciais.');
+            if (resposta.status === 401) {
+                throw new Error('Credenciais invalidas. Por favor, verifique seu email e senha.');
+            } else if (resposta.status === 500) {
+                throw new Error('Erro no servidor. Tente novamente mais tarde.');
+            } else {
+                throw new Error('Falha ao realizar login. Verifique suas credenciais.');
+            }
         }
 
         let data = await resposta.json();
         localStorage.setItem('user', JSON.stringify(data));
+
+        // Redirecionar ou atualizar a interface do usuário para indicar login bem-sucedido
+        window.location.href = 'home.html'; 
     } catch (error) {
+        // Esconder a mensagem de carregamento ou indicador em caso de erro
+        document.getElementById('loading').style.display = 'none';
         document.getElementById('error-message').innerText = error.message;
     }
 }
