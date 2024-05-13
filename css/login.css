@@ -1,39 +1,50 @@
-/* Definindo estilos para o corpo e HTML */
-body, html {
-  height: 100%;
+
+body {
+  background-image: linear-gradient(rgb(249, 252, 253), rgb(5, 172, 172));
+  color: #333;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; /* Cor de fundo */
+  height: 100vh;
+  padding-bottom: 100px;
 }
 
-/* Estilos para o contêiner */
-.container {
-  text-align: center; /* Centralizando o conteúdo */
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 50px auto; /* Adicionei margem para centralizar o formulário */
+  max-width: 500px;
+  grid-gap: 20px;
+  background-color: #fff; /* Adicionei uma cor de fundo para o formulário */
+  border-radius: 10px; /* Adicionei borda arredondada para o formulário */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionei sombra para o formulário */
+  padding: 30px;
 }
 
-/* Estilos para a mensagem */
-.message {
-  background-color: #ffffff; /* Cor de fundo */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+.form h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Estilos para os botões */
-button {
-  padding: 10px 20px;
-  background-color: #007bff; /* Cor de fundo */
-  color: #fff; /* Cor do texto */
+input[type=text],
+select,
+input[type=password],
+input[type=date] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px; /* Ajustei o tamanho da fonte */
+}
+
+input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-}
-
-/* Efeito de hover nos botões */
-button:hover {
-  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  font-size: 16px;
 }

@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
-  <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="../css/login.css" media="screen" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" media="screen" />        
 </head>
 <body>
   <header>
-    <div class="containerlogo">
-      <img src="../img/prata.jfif" class="logo">
-      <a href="../index.html">ATelier Prata</a>
-    </div>
-    <ul>
-      <li>Login</li>
-    </ul>
-  </header>
-
-  <section class="form">
-    <h1>Faça o seu login</h1>
-    <form>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Seu email" required>
+      <div class="containerlogo"> 
+          <img src="../img/prata.jfif" class="logo">
+          <a href="../index.html">Atelier Prata</a>
       </div>
-      <div class="form-group">
-        <label for="password">Senha</label>
-        <input type="password" id="password" name="password" placeholder="Sua senha" required>
-      </div>
-      <input type="button" value="Entrar" onclick="validarLogin()">
-    </form>
-  </section>
+      <ul>
+        <li><a href="../home.html">Cadastrar</a></li>  <!-- COLOCAR PARA DIRECIONAR O GUIA DE CADASTRO -->
+      </ul>
+    </header>
+    <section class="form">
+        <h1>Login</h1>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email ou CPF">
 
-  <footer>
-    <div id="error-message"></div>
-  </footer>
-
-  <script src="../script/login.js"></script>
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Senha">
+                <input type="button" value="Submit" onclick="redirectHome()">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div id="error-message"></div>
+    </footer>
+    <script src="../script/login.js"></script>
+    <script>
+        function redirectHome() {
+            window.location.href = "../home.html";
+        }
+    </script>
 </body>
 </html>
