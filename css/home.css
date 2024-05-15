@@ -1,54 +1,85 @@
-/* Reset de Estilos */
-body, h1, h2, p, ul, li {
-    margin: 0;
+* {
+    box-sizing: border-box;
+  }
+  
+  *{
     padding: 0;
-}
-
-/* Estilos */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    background-color: #444;
-    padding: 10px;
-}
-
-nav ul {
+    margin: 0;
+  }
+  a, ul {
+    color: rgb(0, 0, 0);
     list-style: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
     text-decoration: none;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    font-weight: bold;
+    font-size: 26px;
+  }
+  
+  body{
+    background-color: aliceblue;
+    margin: 0;
+  }
+  
+  header > ul {
+    display: flex;
+    padding:20px;
+  }
+  
+  body{
+    margin-bottom: 480px;
+    background-image: linear-gradient( rgb(249, 252, 253) ,#2bdbdb ,rgb(5, 172, 172));
+  }
+  
+  li{
+    margin-left: 12px;  
+  }
+  
+  header{
+    height:155px;
     width: 100%;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1/4;
+    padding: 5px;
+    box-shadow: 1px 1px 10px black;
+    background-image: linear-gradient( rgb(249, 252, 253) ,rgb(111, 223, 223))
+  }
+  
+  .containerlogo {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    width: 140px;
+    border-radius: 140%;
+    margin: 5px;
+  }
+  
+  .containerpesquisa{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding-right: 10px;
+    padding: 50;
+    margin-left: 200px;
+  }
+  
+  #pesquisa{
+    width: 550px;
+    padding: 18px;
+    border: none;
+    border-radius: 25px;
+  }
+  
+
+  
+  h1{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    max-width: 780px;
+    margin: auto;
+    margin-top: 80px;
+  }
+  
+  
