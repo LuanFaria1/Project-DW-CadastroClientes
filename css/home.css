@@ -1,85 +1,134 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  *{
-    padding: 0;
-    margin: 0;
-  }
-  a, ul {
-    color: rgb(0, 0, 0);
-    list-style: none;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 26px;
-  }
-  
-  body{
-    background-color: aliceblue;
-    margin: 0;
-  }
-  
-  header > ul {
-    display: flex;
-    padding:20px;
-  }
-  
-  body{
-    margin-bottom: 480px;
-    background-image: linear-gradient( rgb(249, 252, 253) ,#2bdbdb ,rgb(5, 172, 172));
-  }
-  
-  li{
-    margin-left: 12px;  
-  }
-  
-  header{
-    height:155px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    grid-column: 1/4;
-    padding: 5px;
-    box-shadow: 1px 1px 10px black;
-    background-image: linear-gradient( rgb(249, 252, 253) ,rgb(111, 223, 223))
-  }
-  
-  .containerlogo {
-    display: flex;
-    align-items: center;
-  }
-  .logo {
-    width: 140px;
-    border-radius: 140%;
-    margin: 5px;
-  }
-  
-  .containerpesquisa{
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 25px;
-    padding-right: 10px;
-    padding: 50;
-    margin-left: 200px;
-  }
-  
-  #pesquisa{
-    width: 550px;
-    padding: 18px;
-    border: none;
-    border-radius: 25px;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  
-  h1{
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    max-width: 780px;
-    margin: auto;
-    margin-top: 80px;
-  }
-  
-  
+body {
+  margin-bottom: 480px;
+  background: linear-gradient(rgb(249, 252, 253), #2bdbdb, rgb(5, 172, 172));
+  font: 16px Arial, sans-serif;
+}
+
+a, ul {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+header {
+  height: 155px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  box-shadow: 1px 1px 10px black;
+  background: linear-gradient(rgb(249, 252, 253), rgb(111, 223, 223));
+}
+
+header > ul {
+  display: flex;
+  padding: 20px;
+}
+
+li {
+  margin-left: 12px;  
+}
+
+.containerlogo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 140px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.containerpesquisa {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 0 10px;
+  margin-left: 200px;
+}
+
+#pesquisa {
+  width: 550px;
+  padding: 18px;
+  border: none;
+  border-radius: 25px;
+}
+
+h1 {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  max-width: 780px;
+  margin: 80px auto 0;
+  padding: 10px;
+}
+
+.endereco-lista {
+  width: 50%;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.endereco-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.endereco-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.endereco-item p {
+  margin: 5px 0;
+}
+
+.endereco-item strong {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}

@@ -10,12 +10,12 @@ body {
 .form {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 50px auto; /* Adicionei margem para centralizar o formulário */
+  margin: 50px auto; 
   max-width: 500px;
   grid-gap: 20px;
-  background-color: #fff; /* Adicionei uma cor de fundo para o formulário */
-  border-radius: 10px; /* Adicionei borda arredondada para o formulário */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionei sombra para o formulário */
+  background-color: #fff; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   padding: 30px;
 }
 
@@ -34,7 +34,7 @@ input[type=date] {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 16px; /* Ajustei o tamanho da fonte */
+  font-size: 16px; 
 }
 
 input[type=button] {

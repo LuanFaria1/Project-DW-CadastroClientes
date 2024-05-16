@@ -3,60 +3,8 @@
 <head>
     <title>Lista de Endereços</title>
     <link rel="stylesheet" type="text/css" href="../css/home.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/endereco.css" media="screen" />        
-    <style>
-        .endereco-lista {
-            width: 50%;
-            margin: 30px auto;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-        .endereco-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-        }
-        .endereco-item:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .endereco-item p {
-            margin: 5px 0;
-        }
-        .endereco-item strong {
-            font-weight: bold;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .btn-group {
-            margin-top: 20px;
-        }
-        .btn {
-            padding: 5px 10px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-        }
-        .btn-danger {
-            background-color: #dc3545;
-            color: #fff;
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/endereco.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css" media="screen" />
 </head>
 <body>
     <header>
@@ -72,56 +20,6 @@
         <h1>Lista de Endereços</h1>
         <div id="endereco-container"></div>
     </section>
-    <footer>
-        <div id="error-message"></div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const enderecoContainer = document.getElementById('endereco-container');
-
-            // Função para renderizar os endereços
-            function renderizarEnderecos() {
-                enderecoContainer.innerHTML = ''; // Limpa o conteúdo atual
-
-                // Recupera os endereços salvos no localStorage
-                const enderecos = JSON.parse(localStorage.getItem('enderecos')) || [];
-
-                enderecos.forEach(function(endereco, index) {
-                    const enderecoItem = document.createElement('div');
-                    enderecoItem.classList.add('endereco-item');
-                    enderecoItem.innerHTML = `
-                        <p><strong>Título:</strong> ${endereco.titulo}</p>
-                        <p><strong>Endereço:</strong> ${endereco.endereco}</p>
-                        <p><strong>Número:</strong> ${endereco.numero}</p>
-                        <p><strong>Complemento:</strong> ${endereco.complemento || 'N/A'}</p>
-                        <p><strong>CEP:</strong> ${endereco.cep}</p>
-                        <div class="btn-group">
-                            <button class="btn btn-primary" onclick="editarEndereco(${index})">Editar</button>
-                            <button class="btn btn-danger" onclick="removerEndereco(${index})">Remover</button>
-                        </div>
-                    `;
-                    enderecoContainer.appendChild(enderecoItem);
-                });
-            }
-
-            // Chamada inicial para renderizar os endereços
-            renderizarEnderecos();
-
-            // Função para remover um endereço
-            window.removerEndereco = function(index) {
-                const enderecos = JSON.parse(localStorage.getItem('enderecos')) || [];
-                enderecos.splice(index, 1); // Remove o endereço do array
-                localStorage.setItem('enderecos', JSON.stringify(enderecos)); // Atualiza o localStorage
-                renderizarEnderecos(); // Renderiza novamente os endereços atualizados
-            };
-
-            // Função para editar um endereço
-            window.editarEndereco = function(index) {
-                // Implemente a lógica para editar um endereço de acordo com sua necessidade
-                alert('Funcionalidade de edição ainda não implementada.');
-            };
-        });
-    </script>
+    <script src="../script/home.js"></script>
 </body>
 </html>
